@@ -1,0 +1,17 @@
+import random
+
+i = []
+
+for x in range(47):
+    i.append(random.randint(20, 200))
+print(i)
+
+for x in range(3):
+    i.append(int(input("Vul waarde in: ")))
+print(i)
+
+i.sort(reverse=True)
+
+print("De grootste 3 getallen zijn:", i[:3])
+print("Het gemiddelde is ", sum(i) / len(i))
+print("Lijst van hoog naar laag:", i)
