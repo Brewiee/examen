@@ -1,0 +1,29 @@
+def aanspreking(geslacht):
+    if geslacht == "m":
+        benoem = "Heer"
+    elif geslacht == "v":
+        benoem = "Mevrouw"
+    else:
+        benoem = ""
+    return benoem
+
+def ttl(titel):
+    if titel == "dr":
+        benoem = "Dokter"
+    elif titel == "prof":
+        benoem = "Professor"
+    elif titel == "ir":
+        benoem = "Ingenieur"
+    else:
+        benoem = ""
+    return benoem
+
+for _ in range(3):
+    geslacht = input("Geef het geslacht M/V: ").lower()
+    familie_naam = input("Geef de familienaam ").lower()
+    titel = input("Geef titel, dr/prof/ir: ").lower()
+
+    o_titel = ttl(titel)
+    o_aanspreking = aanspreking(geslacht)
+
+    print("Geachte", o_aanspreking, o_titel, familie_naam)
